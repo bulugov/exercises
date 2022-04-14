@@ -8,7 +8,7 @@ def countLines():
     totalLines = len(nonEmptyLines)
 
     print("Lines:", totalLines)
-    # Close the file after each function so one function does not affect the output of the others
+    # Close and reopen the file after each function so one function does not affect the output of the others
     file.close()
 
 
