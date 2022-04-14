@@ -1,4 +1,4 @@
-def countLines():
+def count_lines(ignore_whitespace):
     # Count the number of non-empty lines in the text file
     file = open("poem.txt", "r")
     for line in file:
@@ -12,7 +12,7 @@ def countLines():
     file.close()
 
 
-def countWords():
+def count_words(ignore_whitespace):
     # Count the words in the text file
     file = open("poem.txt", "r")
     totalWords = 0
@@ -25,7 +25,7 @@ def countWords():
     file.close()
 
 
-def countChars():
+def count_characters(ignore_whitespace):
     # Count the characters in the text file
     file = open("poem.txt", "r")
     totalChars = 0
