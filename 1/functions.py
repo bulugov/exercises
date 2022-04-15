@@ -1,22 +1,19 @@
 def count_lines(ignore_whitespace=False):
     # Count the number of non-empty lines in the text file
-    totalNonEmpty = 0
-    totalEmpty = 0
+    totalLines = 0
     with open("poem.txt", "r") as file:
         for line in file:
             if ignore_whitespace == True:
                 if line != "\n":
                     nonEmptyLines = line.strip("\n")
-                    totalNonEmpty = len(nonEmptyLines)
+                    totalLines = len(nonEmptyLines)
             else:
-                totalEmpty += 1
-
-            totalEmpty += totalNonEmpty
+                totalLines += 1
 
     if ignore_whitespace == True:
-        print("Number of lines (non-empty):", totalNonEmpty)
+        print("Number of lines (non-empty):", totalLines)
     else:
-        print("Number of lines:", totalEmpty)
+        print("Number of lines:", totalLines)
 
 
 def count_words(ignore_whitespace=False):
@@ -29,6 +26,7 @@ def count_words(ignore_whitespace=False):
                 words = line.split()
                 totalWords += len(words)
             else:
+                # line = line.strip("\n")
                 words = line.split()
                 totalWords += len(words)
 
