@@ -1,4 +1,4 @@
-from test import *
+from functions import *
 
 if __name__ == "__main__":
     count_lines(True)
