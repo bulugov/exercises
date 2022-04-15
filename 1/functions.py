@@ -29,7 +29,6 @@ def count_words(ignore_whitespace=False):
                 words = line.split()
                 totalWords += len(words)
             else:
-                # line = line.strip("\n")
                 words = line.split()
                 totalWords += len(words)
 
