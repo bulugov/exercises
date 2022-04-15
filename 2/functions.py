@@ -2,6 +2,11 @@ import random
 
 
 class Rectangle:
+    """
+    A class to represent Rectangles.
+    Has attributes of number, length, width.
+    """
+
     def __init__(self, number, length, width):
         self.length = length
         self.width = width
@@ -11,7 +16,6 @@ class Rectangle:
         """
         Calculates area of the object
         """
-
         return self.length * self.width
 
 
