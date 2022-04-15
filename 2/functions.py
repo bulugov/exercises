@@ -8,6 +8,9 @@ class Rectangle:
         self.number = number
 
     def calculateArea(self):
+        """
+        Calculates area of the object
+        """
 
         return self.length * self.width
 
@@ -16,7 +19,9 @@ list = [1, 2, 3, 4]
 
 
 def calculateMinMax():
-    # Creates several objects of class Rectangle and finds min/max areas
+    """
+    Adds several objects of class Rectangle and calculates min/max area
+    """
     areas = []
 
     for i in range(len(list)):
