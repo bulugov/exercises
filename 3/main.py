@@ -92,6 +92,13 @@ def update_employee():
 
     try:
         code = input("Enter the existing code of the employee:")
+        cur.execute(f"SELECT * from EMPLOYEE WHERE code='{code}'")
+        if cur.fetchall():
+            pass
+        else:
+            print("Code does not exist.")
+            sys.exit(1)
+
         new_fname = input("Enter the new first name:")
         new_lname = input("Enter the new last name:")
         new_email = input("Enter the new email:")
@@ -120,6 +127,13 @@ def delete_employee():
     cur = conn.cursor()
     try:
         code = input("Enter the code of the employee to delete:")
+
+        cur.execute(f"SELECT * from EMPLOYEE WHERE code='{code}'")
+        if cur.fetchall():
+            pass
+        else:
+            print("Code does not exist.")
+            sys.exit(1)
 
         if code == "":
             print("Empty parameter")
