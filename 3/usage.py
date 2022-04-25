@@ -71,7 +71,7 @@ def check_out(conn, cur):
             f"SELECT type from USAGE WHERE type = 'CHECK_OUT' and device_id = '{device_id}'"
         )
         if cur.fetchall():
-            print("Device already checked in.")
+            print("Device already checked out.")
             sys.exit(1)
         else:
             pass
