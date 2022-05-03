@@ -77,7 +77,7 @@ def check_out(conn, cur):
             pass
 
         cur.execute(
-            f"UPDATE USAGE SET type = 'CHECK_IN' WHERE usage.employee_id = '{employee_id}' AND usage.device_id = '{device_id}'"
+            f"UPDATE USAGE SET type = 'CHECK_OUT' WHERE usage.employee_id = '{employee_id}' AND usage.device_id = '{device_id}'"
         )
         conn.commit()
         print("Entry updated.")
